@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TPM - Pertemuan 2</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --main-bg-color: coral;
+      }
+
+      @keyframes muter {
+        0% {
+          transform: rotate(0deg);
+        }
+        25% {
+          transform: rotate(90deg);
+        }
+        75% {
+          transform: rotate(100deg);
+          background-color: salmon;
+        }
+        100% {
+          transform: scale(10);
+        }
+      }
+
+      h1 {
+        font-family: "Montserrat", sans-serif;
+      }
+
+      /* div {
+        width: 500px;
+        height: 500px;
+        background-color: red;
+      } */
+
+      .display {
+        display: block;
+      }
+
+      .flex {
+        width: calc(100vw - 500px);
+        height: 500px;
+        background-color: rgba(255, 200, 100, 50);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column-reverse;
+      }
+
+      .transform {
+        animation: muter 2s reverse;
+      }
+
+      .transform:hover {
+        background-color: seagreen;
+      }
+
+      .hover:hover {
+        background-color: var(--main-bg-color);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pertemuan 2 - TPM</h1>
+    <i class="fa fa-address-book" aria-hidden="true"></i>
+    <div>
+      <div
+        class="container-panjang transform link-blank"
+        style="background: violet; width: 100px"
+      >
+        randi dalam div
+      </div>
+      <div class="hover">HALO</div>
+      <div class="" style="">randi dalam div</div>
+      <span style="background: blue; width: 1000px">randi dalam span</span>
+      <span style="background: blue">randi dalam span</span>
+      <p>randi dalam p</p>
+      <span></span>
+      <p>halo</p>
+      <span>halo</span>
+      <div>halo</div>
+      <section>halo</section>
+
+      <div class="flex">
+        <div>randi 1</div>
+        <div>randi 2</div>
+        <div>randi 3</div>
+        <div>randi 4</div>
+        <div>randi5</div>
+      </div>
+    </div>
+  </body>
+</html>
