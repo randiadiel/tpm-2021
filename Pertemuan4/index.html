@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pertemuan4</title>
+  </head>
+  <body>
+    <div id="root" randi="true">0</div>
+
+    <div class="blue">1</div>
+    <div class="blue">2</div>
+    <div class="blue">3</div>
+    <div class="blue">4</div>
+    <div class="blue">5</div>
+
+    <button id="btn">Click Me</button>
+
+    <input id="a" type="number" />
+    <input id="b" type="number" />
+    <button id="addBtn">Add</button>
+    <button onclick="logging(`hello`)">logging</button>
+
+    <a href="https://google.com" target="_blank" rel="noreferrer noopener"
+      >test</a
+    >
+
+    <script defer>
+      const object = { name: "hello" };
+      console.log(object.name);
+      const rootDiv = document.getElementById("root");
+      const blueClass = document.getElementsByClassName("blue");
+      for (let i = 0; i < 5; i++) {
+        blueClass[i].innerHTML = "hello";
+      }
+      setInterval(() => {
+        rootDiv.innerHTML = parseInt(rootDiv.innerHTML) + 1;
+      }, 1000);
+
+      const btn = document.getElementById("btn");
+
+      btn.addEventListener("click", (event) => {
+        console.log(event);
+        rootDiv.innerHTML = 0;
+      });
+
+      const aField = document.getElementById("a");
+      const bField = document.getElementById("b");
+      const addBtn = document.getElementById("addBtn");
+
+      const add = (a, b) => {
+        return a + b;
+      };
+
+      addBtn.addEventListener("click", () => {
+        const { valueAsNumber: a } = aField;
+        const { valueAsNumber: b } = bField;
+        rootDiv.innerHTML = add(a, b);
+      });
+
+      const logging = (log) => {
+        console.log("%cHELLO WORLD", "font-size: 60px; color: #256fee");
+        console.log(log);
+      };
+    </script>
+  </body>
+</html>
